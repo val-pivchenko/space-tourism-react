@@ -1,0 +1,62 @@
+.home {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+    background: url('../assets/home/background-home-desktop.jpg');
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+.home-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home-content {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.home-content-left {
+    margin-left: 3rem;
+  width: 28rem;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-content-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.home-explore {
+  text-transform: uppercase;
+  border-radius: 50%;
+  width:17.125rem;
+  height: 17.125rem;
+  border: none;
+  outline:0rem solid rgba(255, 255, 255, 0.0);
+  transition: .3s;
+}
+
+.home-explore:hover {
+  outline: 5.5rem solid rgba(255, 255, 255, 0.2);
+}
+
+.home-bodytext {
+  line-height: 2rem;
+}
+
+.home-heading-1 {
+  margin: 2rem 0;
+}
