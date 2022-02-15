@@ -16,6 +16,10 @@ font-family: 'Bellefair', serif; */
   box-sizing: border-box;
 }
 
+.hamburger, .close {
+  display: none;
+}
+
 .heading-1 {
   font-weight: 400;
   color: var(--main-white);
@@ -30,11 +34,17 @@ font-family: 'Bellefair', serif; */
 }
 
 .heading-3 {
+  text-transform: uppercase;
+  color: var(--main-white);
+  font-weight: 400;
   font-family: 'Bellefair', serif;
   font-size: 3.5rem;
 }
 
 .heading-4 {
+  text-transform: uppercase;
+  color: black;
+  font-weight: 400;
   font-family: 'Bellefair', serif;
   font-size: 2rem;
 }
@@ -49,11 +59,15 @@ font-family: 'Bellefair', serif; */
 }
 
 .sh1 {
+  color:#FFFFFF;
+text-transform: uppercase;
   font-family: 'Bellefair', serif;
   font-size: 1.75rem;
 }
 
 .sh2 {
+  color: #D0D6F9;
+  text-transform: uppercase;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 0.875rem;
   letter-spacing: 2.35px;
@@ -67,7 +81,7 @@ font-family: 'Bellefair', serif; */
 
 .nav-li {
   height: 100%;
-  margin-right: 3rem;
+  margin: 1.5rem;
   list-style-type: none;
 }
 
@@ -96,7 +110,8 @@ font-family: 'Bellefair', serif; */
 }
 
 .nav-ul {
-  background-color: rgba(255, 255, 255, .15);  
+  /* z-index: +1; */
+  background-color: rgba(255, 255, 255, .1);  
   backdrop-filter: blur(10px);
   height: 6rem;
   width: 51.875rem;
@@ -108,7 +123,7 @@ font-family: 'Bellefair', serif; */
 hr {
   z-index: 1;
   border: 1px solid grey;
-  width: 40rem;
+  width: 30%;
   display: inline;
 }
 
@@ -129,4 +144,88 @@ nav {
   color: #D0D6F9;
   font-family: 'Barlow', sans-serif;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    width: 100%;
+  }
+  hr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 586px) {
+.nav-ul {
+  z-index: 1;
+  flex-direction: column;
+  backdrop-filter: blur(40px);
+  height: 100vh;
+  width: 14rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-ul.show {
+  display: flex;
+}
+
+
+nav {
+
+top:0;
+  align-items: flex-start;
+}
+
+.logo {
+  margin-top: 2.5rem;
+}
+
+.hamburger {
+  display: block;
+  z-index: 2;
+  position: absolute;
+  right: 2rem;
+  top: 2.5rem;
+}
+
+.btn-hamb {
+  display: none;
+  z-index: 2;
+outline: none;
+background-color: transparent;
+border: none;
+}
+
+.btn-hamb.show{
+display: block;
+  }
+
+  .close {
+display: block;
+    z-index: 2;
+    position: absolute;
+    right: 2rem;
+    top: 2.5rem;
+  }
+
+  .btn-close {
+    z-index: 2;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  display: none;
+  }
+  
+  .btn-close.show{
+  display: block;
+    }
+
+.nav-li {
+  height: 3rem;
+  margin: 1.5rem;
+  list-style-type: none;
+}
+
 }

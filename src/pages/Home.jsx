@@ -12,7 +12,7 @@ const Home = () => {
         <section className="home-bottom">
             <div className="home-content">
                 <div className="home-content-left">
-                    <h5 className="heading-5">So, you want to travel to</h5>
+                    <h5 className="home-heading-5 heading-5">So, you want to travel to</h5>
                     <h1 className="home-heading-1 heading-1">Space</h1>
                     <p className="home-bodytext bodytext">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
                 </div>

@@ -1,10 +1,14 @@
-import logo from '../assets/shared/logo.svg'
+// import logo from '../assets/shared/logo.svg'
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const [isActive, setIsActive] = useState(false)
+    const [hambShow, setHambShow] = useState(true)
+
+    const [closeShow, setCloseShow] = useState(false)
+
+    const [navShow, setNavShow] = useState(false)
 
     const navigate = useNavigate()
 
@@ -16,18 +20,31 @@ const Navbar = () => {
         }
     }
 
-    const onClick = () => {
-        setIsActive(!isActive)
-        navigate()
-    }
-
     return (
         <nav>
             <div className="logo">
-                <img src={logo} alt="" />
+                <img src='assets/shared/logo.svg' alt="" />
+            </div>
+            <div className="hamburger">
+                <button onClick={() => {
+                    setHambShow(!hambShow)
+                    setCloseShow(!closeShow)
+                    setNavShow(!navShow)
+                }} className={hambShow ? 'btn-hamb show' : 'btn-hamb'}>
+                    <img src='assets/shared/icon-hamburger.svg' alt="" />
+                </button>
+            </div>
+            <div className="close">
+                <button onClick={() => {
+                    setHambShow(!hambShow)
+                    setCloseShow(!closeShow)
+                    setNavShow(!navShow)
+                }} className={closeShow ? 'btn-close show' : 'btn-close'}>
+                    <img src='assets/shared/icon-close.svg' alt="" />
+                </button>
             </div>
             <hr />
-            <ul className='nav-ul'>
+            <ul className={navShow ? 'nav-ul show' : 'nav-ul'}>
                 <li className='nav-li'>
                     <button id='home' className={pathMatchRoute('/') ? 'btn-nav active' : 'btn-nav'} onClick={() => {
                         navigate('/')
