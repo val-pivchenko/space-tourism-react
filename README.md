@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Space Tourism React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Deployment: https://space-tourism-val-pivchenko.netlify.app/
 
 ## Available Scripts
 
